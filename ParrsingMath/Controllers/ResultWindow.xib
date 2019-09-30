@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ResultWindow" customModule="ParrsingMath" customModuleProvider="target">
+            <connections>
+                <outlet property="goBackButton" destination="P9Y-zu-4s4" id="aXJ-gw-WL8"/>
+                <outlet property="resultTextField" destination="vAN-Vu-3Xf" id="Zz0-aP-0Pi"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Result" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="114"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vAN-Vu-3Xf">
+                        <rect key="frame" x="29" y="68" width="423" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="UxD-Kl-DvQ"/>
+                        </constraints>
+                        <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="result" id="WBP-cd-KO5">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P9Y-zu-4s4">
+                        <rect key="frame" x="195" y="22" width="91" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="79" id="3zI-US-eev"/>
+                            <constraint firstAttribute="height" constant="21" id="Keu-ky-5VO"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Go Back" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0og-th-FZ4">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="didClickBackButton:" target="-2" id="hv0-yV-LN4"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="vAN-Vu-3Xf" secondAttribute="trailing" constant="30" id="Z83-Bp-rYs"/>
+                    <constraint firstItem="P9Y-zu-4s4" firstAttribute="top" secondItem="vAN-Vu-3Xf" secondAttribute="bottom" constant="18" id="fkr-7i-cUg"/>
+                    <constraint firstItem="P9Y-zu-4s4" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="iP3-vO-fED"/>
+                    <constraint firstItem="vAN-Vu-3Xf" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="29" id="pnl-jX-IGy"/>
+                    <constraint firstItem="vAN-Vu-3Xf" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="31" id="tnN-sS-F78"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+    </objects>
+</document>
